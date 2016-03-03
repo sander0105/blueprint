@@ -365,7 +365,7 @@ class Blueprint
      */
     protected function prepareBody($body, $contentType)
     {
-        if (strpos($contentType, 'application/json') === 0) {
+        if (strpos($contentType, 'application/json') === 0 || strpos($contentType, 'application/geojson') === 0) {
             return json_encode($body, JSON_PRETTY_PRINT);
         }
 
